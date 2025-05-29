@@ -13,3 +13,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Contact {
+  id             Int      @id @default(autoincrement())
+  email          String? 
+  phoneNumber    String?
+  linkedId       Int?     
+  linkPrecedence String   // 'primary' or 'secondary'
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  deletedAt      DateTime?
+}
