@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "npx prisma generate && tsc",
+    "start": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
